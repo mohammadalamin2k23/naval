@@ -17,15 +17,15 @@ toggleButton.addEventListener("click", () => {
  document.body.classList.toggle("dark-mode");
 });
 
-const jobCards = document.querySelectorAll(".job-card");
+const repoCards = document.querySelectorAll("repo-card");
 const logo = document.querySelector(".logo");
-const jobLogos = document.querySelector(".job-logos");
-const jobDetailTitle = document.querySelector(
- ".job-explain-content .job-card-title"
+const repoLogos = document.querySelector(".repo-logos");
+const repoDetailTitle = document.querySelector(
+ ".repo-explain-content .repo-card-title"
 );
-const jobBg = document.querySelector(".job-bg");
+const repoBg = document.querySelector(".repo-bg");
 
-jobCards.forEach((jobCard) => {
+jobCards.forEach((repoCard) => {
  jobCard.addEventListener("click", () => {
   const number = Math.floor(Math.random() * 10);
   const url = `https://unsplash.it/640/425?image=${number}`;
@@ -35,9 +35,9 @@ jobCards.forEach((jobCard) => {
   const bg = logo.style.backgroundColor;
   console.log(bg);
   jobBg.style.background = bg;
-  const title = jobCard.querySelector(".job-card-title");
-  jobDetailTitle.textContent = title.textContent;
-  jobLogos.innerHTML = logo.outerHTML;
+  const title = repoCard.querySelector(".job-card-title");
+  repoDetailTitle.textContent = title.textContent;
+  repoLogos.innerHTML = logo.outerHTML;
   wrapper.classList.add("detail-page");
   wrapper.scrollTop = 0;
  });
