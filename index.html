@@ -1,38 +1,58 @@
 <!doctype html>
 <html lng="en">
-<link rel="stylesheet" href="css/styles.css">
-
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="grid.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/script.js">
+<script src="script.js">
     </script>
     <body><div class="repo">
  <div class="header">
   <div class="logo">
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <path xmlns="http://www.w3.org/2000/svg" d="M512 503.5H381.7a48 48 0 01-45.3-32.1L265 268.1l-9-25.5 2.7-124.6L338.2 8.5l23.5 67.1L512 503.5z" fill="#0473ff" data-original="#28b446" />
-    <path xmlns="http://www.w3.org/2000/svg" fill="#0473ff" data-original="#219b38" d="M361.7 75.6L265 268.1l-9-25.5 2.7-124.6L338.2 8.5z" />
-    <path xmlns="http://www.w3.org/2000/svg" d="M338.2 8.5l-82.2 234-80.4 228.9a48 48 0 01-45.3 32.1H0l173.8-495h164.4z" fill="#0473ff" data-original="#518ef8" />
-   </svg>
-   Naval
+   
+<div class="text1">Naval</div>
   </div>
+  
   <div class="header-menu">
-   <a href="#" class="active">Find Repo</a>
-   <a href="#">  Review</a>
-   <a href="#">Trending</a>
+   
+   <div class="filter-button-wrapper">
+          <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
+          <div class="filter-menu">
+            <label>Category</label>
+            <select>
+              <option>All Categories</option>
+              <option>Furniture</option>                     <option>Decoration</option>
+              <option>Kitchen</option>
+              <option>Bathroom</option>
+            </select>
+            <label>Status</label>
+            <select>
+              <option>All Status</option>
+              <option>Active</option>
+              <option>Disabled</option>
+            </select>
+            <div class="filter-menu-buttons">
+              <button class="filter-button reset">
+                Reset
+              </button>
+              <button class="filter-button apply">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="user-settings">
    <div class="dark-light">
-    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="ro und" stroke-linejoin="round">
-     <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+    <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+          <defs></defs>
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
    </div>
-   <div class="user-menu">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-square">
-     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" /></svg>
-   </div>
-   <img class="user-profile" src="" alt="">
-   <div class="user-name">Mohammad Al-amin</div>
+   
   </div>
  </div>
+ 
  <div class="wrapper">
   <div class="search-menu">
    <div class="search-bar">
@@ -70,124 +90,8 @@
    <button class="search-button">Find Repo</button>
   </div>
   <div class="main-container">
-   <div class="search-type">
-    <div class="alert">
-     <div class="alert-title">Create New Repo</div>
-     <div class="alert-subtitle">Create a New Repo now and never miss a interesting repos</div>
-     <input type="text" placeholder="Enter repo Name">
-     <button class="search-buttons">Create New Repos</button>
-    </div>
-    <div class="repo-time">
-     <div class="repo-time-title">Type of Repos</div>
-     <div class="repo-wrapper">
-      <div class="type-container">
-       <input type="checkbox" id="repo1" class="repo-style" checked>
-       <label for="repo1">HTML Repos</label>
-       <span class="repo-number">56</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo2" class="repo-style">
-       <label for="repo2">CSS Repos</label>
-       <span class="repo-number">43</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo3" class="repo-style">
-       <label for="repo3">JS Repos</label>
-       <span class="repo-number">24</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo4" class="repo-style">
-       <label for="repo4">Java Repos</label>
-       <span class="repo-number">27</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo5" class="repo-style">
-       <label for="repo5">Python</label>
-       <span class="repo-number">76</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo6" class="repo-style">
-       <label for="repo6">Kotlin Repos</label>
-       <span class="repo-number">28</span>
-      </div>
-     </div>
-    </div>
-    <div class="repo-time">
-     <div class="repo-time-title">Seniority Level</div>
-     <div class="repo-wrapper">
-      <div class="type-container">
-       <input type="checkbox" id="repo7" class="repo-style">
-       <label for="repo7">Student Level</label>
-       <span class="repo-number">98</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo8" class="repo-style">
-       <label for="repo8">Entry Level</label>
-       <span class="repo-number">44</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo9" class="repo-style" checked>
-       <label for="repo9">Mid Level</label>
-       <span class="repo-number">35</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo10" class="repo-style" checked>
-       <label for="repo10">PRO</label>
-       <span class="repo-number">29</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo11" class="repo-style">
-       <label for="repo11">Directors</label>
-       <span class="repo-number">26</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo12" class="repo-style">
-       <label for="repo12">VP or Above</label>
-       <span class="repo-number">56</span>
-      </div>
-     </div>
-    </div>
-    <div class="repo-time">
-     <div class="repo-time-title">Star Range</div>
-     <div class="repo-wrapper">
-      <div class="type-container">
-       <input type="checkbox" id="repo1" class="repo-style">
-       <label for="repo1">1 - 5</label>
-       <span class="repo-number">49</span>
-      </div>
-      <div class<="type-container">
-       <input type="checkbox" id="repo2" class="repo-style">
-       <label for="repo2">5 - 10</label>
-       <span class="repo-number">67</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo3" class="repo-style">
-       <label for="repo3">11 - 16</label>
-       <span class="repo-number">24</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo4" class="repo-style">
-       <label for="repo4">17 - 23</label>
-       <span class="repo-number">27</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo5" class="repo-style" checked>
-       <label for="repo5">24- 30</label>
-       <span class="repo-number">76</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo6" class="repo-style" checked>
-       <label for="repo6">31- 39</label>
-       <span class="repo-number">22</span>
-      </div>
-      <div class="type-container">
-       <input type="checkbox" id="repo6" class="repo-style">
-       <label for="repo6">40 - 50</label>
-       <span class="repo-number">18</span>
-      </div>
-     </div>
-    </div>
-   </div>
+   
+   
    <div class="searched-Repos">
     <div class="searched-bar">
      <div class="searched-show">Showing 46 Repos</div>
@@ -216,7 +120,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -237,7 +141,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -257,7 +161,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -277,7 +181,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -298,7 +202,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -318,7 +222,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -342,7 +246,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -362,7 +266,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
      <div class="repo-card">
@@ -385,7 +289,7 @@
       </div>
       <div class="repo-card-buttons">
        <button class="search-buttons card-buttons">See Now</button>
-       <button class="search-buttons card-buttons-msg">Messages</button>
+       <button class="search-buttons card-buttons-msg">Details</button>
       </div>
      </div>
     </div>
@@ -626,20 +530,20 @@
        </div>
        <div class="explain-bar">
         <div class="explain-contents">
+        <div class="explain-title">Work level</div>
+        <div class="explain-subtitle">PRO</div>
+         </div>
+        <div class="explain-contents">
         <div class="explain-title">Experience</div>
-        <div class="explain-subtitle">Minimum 1 Year</div>
+        <div class="explain-subtitle">1 Year</div>
          </div>
         <div class="explain-contents">
-        <div class="explain-title">Work Level</div>
-        <div class="explain-subtitle">JAVASCRIPT</div>
-         </div>
-        <div class="explain-contents">
-        <div class="explain-title">Employee Type</div>
+        <div class="explain-title">Repo type</div>
         <div class="explain-subtitle">Html Repos</div>
          </div>
         <div class="explain-contents">
-        <div class="explain-title">Offer Salary</div>
-        <div class="explain-subtitle">$2150.0 / Month</div>
+        <div class="explain-title">Points</div>
+        <div class="explain-subtitle">2150.0 / Month</div>
          </div>
        </div>
        <div class="overview-text">
@@ -722,6 +626,7 @@ function copyURL() {
     document.body.removeChild(tempInput);
     alert("URL copied to clipboard!");
 }
+
 </script>
 </body>   
  </html>
